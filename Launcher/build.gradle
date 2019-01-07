@@ -1,0 +1,13 @@
+apply plugin: 'com.github.johnrengelman.shadow'
+
+jar {
+    manifest {
+        attributes("Main-Class": "com.github.Magi1053.SCB200.Launcher")
+    }
+}
+
+dependencies {
+    compile project(':SCB')
+}
+
+build.dependsOn(shadowJar)

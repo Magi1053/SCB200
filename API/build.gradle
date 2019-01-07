@@ -1,0 +1,8 @@
+apply plugin: 'com.github.johnrengelman.shadow'
+
+dependencies {
+    compile project(':SCB')
+    compile "com.sparkjava:spark-core:2.7.2"
+}
+
+build.dependsOn(shadowJar)

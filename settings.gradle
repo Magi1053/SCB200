@@ -1,0 +1,5 @@
+rootProject.name = 'SCB-200'
+include 'SCB'
+include 'API'
+include 'Launcher'
+
