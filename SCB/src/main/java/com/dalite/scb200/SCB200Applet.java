@@ -2,9 +2,17 @@ package com.dalite.scb200;
 
 import javax.swing.*;
 import java.awt.*;
+import java.net.URL;
 
 
 public class SCB200Applet extends JApplet {
+    private final URL host;
+
+    public SCB200Applet(URL url) {
+        super();
+        this.host = url;
+    }
+
     public void init() {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -45,5 +53,15 @@ public class SCB200Applet extends JApplet {
         UIManager.put("ToolTip.font", localFont);
         UIManager.put("Tree.font", localFont);
         new SCB200Frame(this);
+    }
+
+    @Override
+    public URL getDocumentBase() {
+        return this.host;
+    }
+
+    @Override
+    public URL getCodeBase() {
+        return this.host;
     }
 }

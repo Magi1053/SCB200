@@ -1,5 +1,6 @@
 package com.dalite.scb200;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -98,9 +99,9 @@ public class SCB200Frame extends JFrame implements ActionListener, SCB200Refresh
 
         try {
             try {
-                this.fImageLogo = this.fApplet.getImage(new URL(this.fApplet.getDocumentBase(), "logo.gif"));
-                this.fImageOn = this.fApplet.getImage(new URL(this.fApplet.getDocumentBase(), "on.gif"));
-                this.fImageOff = this.fApplet.getImage(new URL(this.fApplet.getDocumentBase(), "off.gif"));
+                this.fImageLogo = ImageIO.read(new URL(this.fApplet.getDocumentBase(), "logo.gif"));
+                this.fImageOn = ImageIO.read(new URL(this.fApplet.getDocumentBase(), "on.gif"));
+                this.fImageOff = ImageIO.read(new URL(this.fApplet.getDocumentBase(), "off.gif"));
             } catch (MalformedURLException localMalformedURLException) {
                 localMalformedURLException.printStackTrace(System.out);
             }
